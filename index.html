@@ -10,27 +10,28 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
     #rubric-difficulty-chart { max-height: 500px; width: 100% !important; height: auto !important; }
-    :root{--primary-color:#0d6efd;--secondary-color:#0a58ca;--success-color:#198754;--warning-color:#ffc107;--danger-color:#dc3545;--info-color:#0dcaf0;--background-color:#f8f9fa;--card-bg-color:#ffffff;--text-color:#333;--heading-color:#212529;--shadow-color:rgba(0,0,0,0.08);--font-family:'Poppins',sans-serif}body{background-color:var(--background-color);font-family:var(--font-family);color:var(--text-color)}.navbar{background:linear-gradient(90deg,var(--primary-color),#0d95fd);box-shadow:0 4px 12px var(--shadow-color)}.navbar-brand{font-weight:700;font-size:1.5rem}.nav-link{font-weight:500;transition:color .3s ease}.nav-link i{margin-right:8px}.nav-item .nav-link.active{background-color:rgba(255,255,255,0.2);border-radius:5px}.page{display:none;animation:fadeIn .5s ease-in-out}@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}.page.active{display:block}.card{border:none;border-radius:12px;box-shadow:0 6px 20px var(--shadow-color);overflow:hidden;transition:transform .2s ease}.card:hover{transform:translateY(-3px)}.card-header{background-color:var(--card-bg-color);border-bottom:1px solid #e0e0e0;font-size:1.2rem;font-weight:600;color:var(--heading-color);padding:1rem 1.5rem}.card-header i{margin-right:10px;color:var(--primary-color)}.stat-card{background-color:var(--card-bg-color);border-left:5px solid var(--primary-color);padding:1.25rem}.stat-card .stat-icon{font-size:2.5rem;opacity:.3}.stat-card .stat-value{font-size:2rem;font-weight:700;color:var(--heading-color)}.stat-card .stat-label{font-weight:500;color:#6c757d}.stat-card.border-success{border-left-color:var(--success-color)}.stat-card.border-warning{border-left-color:var(--warning-color)}.stat-card.border-danger{border-left-color:var(--danger-color)}.table-hover tbody tr:hover{background-color:#f1f1f1}.modal-header{background-color:var(--primary-color);color:white}.modal-header .btn-close{filter:invert(1) grayscale(100%) brightness(200%)}#syncModal .modal-body{text-align:center}.spinner-border{width:3rem;height:3rem}#timer-display{font-size:2rem;font-weight:700;letter-spacing:2px}.timer-warning{color:var(--warning-color)!important}.timer-danger{color:var(--danger-color)!important}
-    #login-page{display:flex;align-items:center;justify-content:center;min-height:100vh;background-color:#e9ecef}#app-container{display:none}
+    :root{--primary-color:#D94689;--secondary-color:#C23A79;--success-color:#198754;--warning-color:#ffc107;--danger-color:#dc3545;--info-color:#0dcaf0;--background-color:#FFF0F5;--card-bg-color:#ffffff;--text-color:#333;--heading-color:#212529;--shadow-color:rgba(217,70,137,0.15);--font-family:'Poppins',sans-serif}body{background-color:var(--background-color);font-family:var(--font-family);color:var(--text-color)}.navbar{background:linear-gradient(90deg,var(--primary-color),#F06292);box-shadow:0 4px 12px var(--shadow-color)}.navbar-brand{font-weight:700;font-size:1.5rem}.nav-link{font-weight:500;transition:color .3s ease}.nav-link i{margin-right:8px}.nav-item .nav-link.active{background-color:rgba(255,255,255,0.2);border-radius:5px}.page{display:none;animation:fadeIn .5s ease-in-out}@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}.page.active{display:block}.card{border:none;border-radius:12px;box-shadow:0 6px 20px var(--shadow-color);overflow:hidden;transition:transform .2s ease}.card:hover{transform:translateY(-3px)}.card-header{background-color:var(--card-bg-color);border-bottom:1px solid #e0e0e0;font-size:1.2rem;font-weight:600;color:var(--heading-color);padding:1rem 1.5rem}.card-header i{margin-right:10px;color:var(--primary-color)}.stat-card{background-color:var(--card-bg-color);border-left:5px solid var(--primary-color);padding:1.25rem}.stat-card .stat-icon{font-size:2.5rem;opacity:.3}.stat-card .stat-value{font-size:2rem;font-weight:700;color:var(--heading-color)}.stat-card .stat-label{font-weight:500;color:#6c757d}.stat-card.border-success{border-left-color:var(--success-color)}.stat-card.border-warning{border-left-color:var(--warning-color)}.stat-card.border-danger{border-left-color:var(--danger-color)}.table-hover tbody tr:hover{background-color:#f1f1f1}.modal-header{background-color:var(--primary-color);color:white}.modal-header .btn-close{filter:invert(1) grayscale(100%) brightness(200%)}#syncModal .modal-body{text-align:center}.spinner-border{width:3rem;height:3rem}#timer-display{font-size:2rem;font-weight:700;letter-spacing:2px}.timer-warning{color:var(--warning-color)!important}.timer-danger{color:var(--danger-color)!important}
+    #login-page{display:flex;align-items:center;justify-content:center;min-height:100vh;background-color:#fce4ec}#app-container{display:none}
     @media (max-width: 767px) { .rubric-item .btn-check + .btn-outline-primary { padding: 0.5rem 0.9rem; font-size: 1.1rem; } }
     .live-monitor-card .card-body { padding: 1rem; } .live-monitor-card .countdown { font-size: 1.5rem; font-weight: 700; }
     /* Styles for About Developer Page */
-    #page-about-developer { font-family: 'Segoe UI', sans-serif; background: linear-gradient(to right, #e3f2fd, #f8f9fa); color: #333; padding: 2rem 0; }
+    #page-about-developer { font-family: 'Segoe UI', sans-serif; background: linear-gradient(to right, #fce4ec, #fff0f5); color: #333; padding: 2rem 0; }
     #page-about-developer .container-about { max-width: 900px; margin: 0 auto; background: white; padding: 25px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 15px; }
     #page-about-developer .profile-photo { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto 20px auto; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-    #page-about-developer h1, #page-about-developer h2 { color: #1565c0; text-align: center; }
+    #page-about-developer h1, #page-about-developer h2 { color: #ad1457; text-align: center; }
     #page-about-developer h1 { font-family: 'Poppins', sans-serif; }
     #page-about-developer ul { padding-left: 20px; list-style-position: inside; }
     #page-about-developer ul li { margin-bottom: 8px; }
-    #page-about-developer a { color: #0d47a1; text-decoration: none; font-weight: 500; }
+    #page-about-developer a { color: #880e4f; text-decoration: none; font-weight: 500; }
     #page-about-developer a:hover { text-decoration: underline; }
-    #page-about-developer .contact-box { margin-top: 20px; background: #e3f2fd; padding: 15px; border-left: 5px solid #2196f3; border-radius: 10px; }
+    #page-about-developer .contact-box { margin-top: 20px; background: #f8bbd0; padding: 15px; border-left: 5px solid #ec407a; border-radius: 10px; }
     #page-about-developer .footer-about { text-align: center; margin-top: 40px; font-size: 14px; color: #888; }
     /* Star rating for feedback */
     .star-rating { unicode-bidi: bidi-override; color: #ccc; font-size: 2rem; direction: rtl; text-align: center; }
     .star-rating > span { display: inline-block; position: relative; width: 1.1em; }
     .star-rating > span:hover:before, .star-rating > span:hover ~ span:before { content: "\2605"; position: absolute; color: #ffc107; }
     .star-rating > input:checked ~ span:before { content: "\2605"; position: absolute; color: #ffc107; }
+    .text-purple { color: #ab47bc !important; }
 </style>
 
 <!-- ================================================================= -->
@@ -44,10 +45,9 @@
     <div class="card shadow-lg" style="width: 22rem;">
         <div class="card-body p-4 text-center">
             <!-- Tambahkan logo di sini -->
-            <img src="LOGO POLTEKKES KEMENKES KUPANG.png" alt="Logo Poltekkes" style="width: 350px; margin-bottom: 40px;">
             
             <h4 class="card-title mb-1">
-                <i class="fas fa-stethoscope text-primary"></i> OSCE App Management V1.3
+                <i class="fas fa-stethoscope text-primary"></i> Midwife OSCE App Management
             </h4>
             <p class="text-muted mb-4">Silakan login untuk melanjutkan</p>
             <form id="login-form">
@@ -73,7 +73,7 @@
 <div id="app-container">
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-    <a class="navbar-brand" href="#" data-page="page-dashboard"><i class="fas fa-stethoscope"></i> OSCE App V1.3</a>
+    <a class="navbar-brand" href="#" data-page="page-dashboard"><i class="fas fa-stethoscope"></i> Midwife OSCE</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ms-auto">
@@ -89,16 +89,7 @@
     </li>
     <li class="nav-item role-admin role-penguji"><a class="nav-link" href="#" data-page="page-penilaian"><i class="fas fa-clipboard-list"></i> Penilaian</a></li>
     <li class="nav-item role-admin"><a class="nav-link" href="#" data-page="page-hasil"><i class="fas fa-chart-bar"></i> Hasil</a></li>
-    <li class="nav-item dropdown role-admin">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCert" role="button" data-bs-toggle="dropdown"><i class="fas fa-award"></i> Sertifikat</a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCert">
-            <li><a class="dropdown-item" href="#" data-page="page-sertifikat-settings"><i class="fas fa-cog"></i> Pengaturan</a></li>
-            <li><a class="dropdown-item" href="#" data-page="page-sertifikat-print"><i class="fas fa-print"></i> Sertifikat Peserta</a></li>
-            <li><a class="dropdown-item" href="#" data-page="page-sertifikat-penguji"><i class="fas fa-user-shield"></i> Sertifikat Penguji</a></li>
-        </ul>
-    </li>
     <li class="nav-item role-admin"><a class="nav-link" href="#" data-page="page-feedback-summary"><i class="fas fa-comment-dots"></i> Feedback</a></li>
-    <li class="nav-item role-admin"><a class="nav-link" href="#" data-page="page-log-sistem"><i class="fas fa-history"></i> Log</a></li>
     <li class="nav-item role-penguji d-none">
         <button class="btn btn-info" onclick="pushPengujiScores()"><i class="fas fa-cloud-upload-alt"></i> Kirim Nilai</button>
     </li>
@@ -849,7 +840,6 @@
 
         <div id="page-about-developer" class="page">
             <div class="container-about">
-              <img src="https://masandigital.com/assets/images/author-photo.jpeg" alt="Foto Septian Andi Prianto" class="profile-photo">
               <h1>👨‍💻 Profil Developer</h1>
               <p><strong>Nama:</strong> Septian Andi Prianto</p>
               <p><strong>Institusi:</strong> Prodi Keperawatan Waikabubak, Poltekkes Kemenkes Kupang</p>
@@ -857,15 +847,13 @@
               <h2>📞 Kontak</h2>
               <ul>
                 <li><strong>Nomor HP:</strong> <a href="https://wa.me/6285253470788" target="_blank">0852-5347-0788</a></li>
-                <li><strong>Email:</strong> <a href="mailto:masandiblogger@gmail.com" target="_blank">masandiblogger@gmail.com</a></li>
-                <li><strong>Instagram:</strong> <a href="https://instagram.com/maz_4ndy" target="_blank">@Maz_4ndy</a></li>
+                <li><strong>Email:</strong> <a href="mailto:masandiblogger@gmail.com" target="_blank">masandy.devcode@gmail.com</a></li>
+                <li><strong>Instagram:</strong> <a href="https://instagram.com/maz_4ndy" target="_blank">@andydevcode</a></li>
                 <li><strong>Facebook:</strong> <a href="https://facebook.com/mas4ndy" target="_blank">@mas4ndy</a></li>
                 <li><strong>Website:</strong> <a href="https://www.masandigital.com" target="_blank">www.masandigital.com</a></li>
               </ul>
           
-              <h2>📍 Alamat</h2>
-              <p>Tersedia atas permintaan atau untuk keperluan kerjasama resmi.</p>
-          
+              
               <h2>🛠️ Tools & Aplikasi</h2>
               <ul>
                 <li><a href="https://cbt-wkb.masandigital.com/" target="_blank">CBT Online Keperawatan</a></li>
@@ -1897,7 +1885,7 @@ function updateLiveMonitor() {
     });
 }
 function updateStatusUjianChart(selesai, sedang, belum) { const ctx = document.getElementById('statusUjianChart').getContext('2d'); if (statusUjianChartInstance) statusUjianChartInstance.destroy(); statusUjianChartInstance = new Chart(ctx, { type: 'doughnut', data: { labels: ['Selesai (>=9 Station)', 'Sedang', 'Belum'], datasets: [{ data: [selesai, sedang, belum], backgroundColor: ['rgba(25, 135, 84, 0.8)', 'rgba(255, 193, 7, 0.8)', 'rgba(220, 53, 69, 0.8)'], borderColor: ['#198754', '#ffc107', '#dc3545'], borderWidth: 1 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top' } } } }); }
-function updatePenilaianPerStationChart(stations, scores) { const ctx = document.getElementById('penilaianPerStationChart').getContext('2d'); const scoreCounts = scores.reduce((acc, score) => { acc[score.stationId] = (acc[score.stationId] || 0) + 1; return acc; }, {}); const labels = stations.map(s => s.name); const data = stations.map(s => scoreCounts[s.id] || 0); if (penilaianPerStationChartInstance) penilaianPerStationChartInstance.destroy(); penilaianPerStationChartInstance = new Chart(ctx, { type: 'bar', data: { labels: labels, datasets: [{ label: 'Jml Penilaian', data: data, backgroundColor: 'rgba(13, 110, 253, 0.6)', borderColor: 'rgba(13, 110, 253, 1)', borderWidth: 1 }] }, options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', scales: { x: { beginAtZero: true, ticks: { stepSize: 1 } } }, plugins: { legend: { display: false } } } }); }
+function updatePenilaianPerStationChart(stations, scores) { const ctx = document.getElementById('penilaianPerStationChart').getContext('2d'); const scoreCounts = scores.reduce((acc, score) => { acc[score.stationId] = (acc[score.stationId] || 0) + 1; return acc; }, {}); const labels = stations.map(s => s.name); const data = stations.map(s => scoreCounts[s.id] || 0); if (penilaianPerStationChartInstance) penilaianPerStationChartInstance.destroy(); penilaianPerStationChartInstance = new Chart(ctx, { type: 'bar', data: { labels: labels, datasets: [{ label: 'Jml Penilaian', data: data, backgroundColor: 'rgba(217, 70, 137, 0.6)', borderColor: 'rgba(217, 70, 137, 1)', borderWidth: 1 }] }, options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', scales: { x: { beginAtZero: true, ticks: { stepSize: 1 } } }, plugins: { legend: { display: false } } } }); }
 
 // =================================================================
 // PENILAIAN (REVISED FOR SMART ASSESSMENT)
@@ -2142,7 +2130,7 @@ function renderStationAnalyticsChart() {
         return { name: station.name, avgScore: totalPercentage / stationScores.length, passRate: (passedCount / stationScores.length) * 100, brm: brmPassingScores[station.id] || 0 };
     }).sort((a, b) => a.name.localeCompare(b.name));
     const ctx = chartCanvas.getContext('2d'); if (stationAnalyticsChartInstance) stationAnalyticsChartInstance.destroy();
-    stationAnalyticsChartInstance = new Chart(ctx, { data: { labels: analyticsData.map(d => d.name), datasets: [{ type: 'bar', label: 'Rerata Nilai (%)', data: analyticsData.map(d => d.avgScore.toFixed(2)), backgroundColor: 'rgba(54, 162, 235, 0.7)', borderColor: 'rgba(54, 162, 235, 1)', order: 2, }, { type: 'line', label: 'Batas Lulus (BRM)', data: analyticsData.map(d => d.brm.toFixed(2)), backgroundColor: 'rgba(255, 99, 132, 1)', borderColor: 'rgba(255, 99, 132, 1)', borderWidth: 3, pointRadius: 5, fill: false, order: 1, }] }, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true, max: 100, ticks: { callback: value => value + '%' }, title: { display: true, text: 'Persentase' } } }, plugins: { legend: { position: 'top' }, tooltip: { callbacks: { label: context => { let label = context.dataset.label || ''; if (label) label += ': '; label += `${context.raw}%`; return label; } } } } } });
+    stationAnalyticsChartInstance = new Chart(ctx, { data: { labels: analyticsData.map(d => d.name), datasets: [{ type: 'bar', label: 'Rerata Nilai (%)', data: analyticsData.map(d => d.avgScore.toFixed(2)), backgroundColor: 'rgba(217, 70, 137, 0.7)', borderColor: 'rgba(217, 70, 137, 1)', order: 2, }, { type: 'line', label: 'Batas Lulus (BRM)', data: analyticsData.map(d => d.brm.toFixed(2)), backgroundColor: 'rgba(255, 99, 132, 1)', borderColor: 'rgba(255, 99, 132, 1)', borderWidth: 3, pointRadius: 5, fill: false, order: 1, }] }, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true, max: 100, ticks: { callback: value => value + '%' }, title: { display: true, text: 'Persentase' } } }, plugins: { legend: { position: 'top' }, tooltip: { callbacks: { label: context => { let label = context.dataset.label || ''; if (label) label += ': '; label += `${context.raw}%`; return label; } } } } } });
 }
 function renderRubricPerformanceChart() {
     const scores = getFromStorage('scores'); const stations = getFromStorage('stations'); const chartCanvas = document.getElementById('rubric-performance-chart'); const fallbackMessage = document.getElementById('rubric-performance-fallback');
@@ -2188,7 +2176,7 @@ function renderGlobalPerformanceAnalysis() {
     const overallAvg = totalGlobalPerfSum / completedPesertaScores.length; avgDisplay.textContent = overallAvg.toFixed(2);
     const overallAvg100 = (overallAvg / 4) * 100; avgDisplay100.textContent = overallAvg100.toFixed(2);
     const ctx = chartCanvas.getContext('2d'); if (globalPerformanceChartInstance) globalPerformanceChartInstance.destroy();
-    globalPerformanceChartInstance = new Chart(ctx, { type: 'bar', data: { labels: ['Tidak Lulus', 'Borderline', 'Lulus', 'Superior'], datasets: [{ label: 'Jumlah Peserta', data: [performanceCounts[1], performanceCounts[2], performanceCounts[3], performanceCounts[4]], backgroundColor: [ 'rgba(220, 53, 69, 0.7)', 'rgba(255, 193, 7, 0.7)', 'rgba(25, 135, 84, 0.7)', 'rgba(13, 110, 253, 0.7)' ], borderColor: [ 'rgb(220, 53, 69)', 'rgb(255, 193, 7)', 'rgb(25, 135, 84)', 'rgb(13, 110, 253)' ], borderWidth: 1 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, title: { display: true, text: 'Distribusi Global Performance Peserta (Selesai)' } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } } } });
+    globalPerformanceChartInstance = new Chart(ctx, { type: 'bar', data: { labels: ['Tidak Lulus', 'Borderline', 'Lulus', 'Superior'], datasets: [{ label: 'Jumlah Peserta', data: [performanceCounts[1], performanceCounts[2], performanceCounts[3], performanceCounts[4]], backgroundColor: [ 'rgba(220, 53, 69, 0.7)', 'rgba(255, 193, 7, 0.7)', 'rgba(25, 135, 84, 0.7)', 'rgba(217, 70, 137, 0.7)' ], borderColor: [ 'rgb(220, 53, 69)', 'rgb(255, 193, 7)', 'rgb(25, 135, 84)', 'rgb(217, 70, 137)' ], borderWidth: 1 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, title: { display: true, text: 'Distribusi Global Performance Peserta (Selesai)' } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } } } });
     return overallAvg100;
 }
 function renderSessionComparisonChart() {
@@ -2231,7 +2219,7 @@ function renderScoreVsGprChart() {
     if (scatterData.length < 2) { chartCanvas.classList.add('d-none'); fallbackMessage.classList.remove('d-none'); if (scoreVsGprChartInstance) scoreVsGprChartInstance.destroy(); return; }
     chartCanvas.classList.remove('d-none'); fallbackMessage.classList.add('d-none');
     const ctx = chartCanvas.getContext('2d'); if (scoreVsGprChartInstance) scoreVsGprChartInstance.destroy();
-    scoreVsGprChartInstance = new Chart(ctx, { type: 'scatter', data: { datasets: [{ label: 'Peserta', data: scatterData, backgroundColor: 'rgba(13, 110, 253, 0.6)' }] }, options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(context) { const dataPoint = context.raw; return [ `Peserta: ${dataPoint.label}`, `Nilai Rata-rata: ${dataPoint.y.toFixed(2)}%`, `Rata-rata GPR: ${dataPoint.x.toFixed(2)}` ]; } } } }, scales: { x: { type: 'linear', position: 'bottom', title: { display: true, text: 'Rata-Rata Global Performance Rating' }, min: 1, max: 4, ticks: { stepSize: 0.5 } }, y: { title: { display: true, text: 'Rata-Rata Nilai Kolektif (%)' }, min: 0, max: 100, ticks: { callback: value => value + '%' } } } } });
+    scoreVsGprChartInstance = new Chart(ctx, { type: 'scatter', data: { datasets: [{ label: 'Peserta', data: scatterData, backgroundColor: 'rgba(217, 70, 137, 0.6)' }] }, options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(context) { const dataPoint = context.raw; return [ `Peserta: ${dataPoint.label}`, `Nilai Rata-rata: ${dataPoint.y.toFixed(2)}%`, `Rata-rata GPR: ${dataPoint.x.toFixed(2)}` ]; } } } }, scales: { x: { type: 'linear', position: 'bottom', title: { display: true, text: 'Rata-Rata Global Performance Rating' }, min: 1, max: 4, ticks: { stepSize: 0.5 } }, y: { title: { display: true, text: 'Rata-Rata Nilai Kolektif (%)' }, min: 0, max: 100, ticks: { callback: value => value + '%' } } } } });
 }
 function loadRemedialRecommendations() {
     const tableBody = document.getElementById('table-remedial-body'); const peserta = getFromStorage('peserta'); const stations = getFromStorage('stations');
@@ -2289,7 +2277,7 @@ function showParticipantDetails(pesertaId) {
     content += `</tbody></table></div>`; modalBody.innerHTML = content;
     document.getElementById('print-participant-result-btn').onclick = () => printParticipantResult(pesertaId);
     const ctx = document.getElementById('participantProgressChart').getContext('2d'); if(participantProgressChartInstance) participantProgressChartInstance.destroy();
-    participantProgressChartInstance = new Chart(ctx, { type: 'radar', data: { labels: chartLabels, datasets: [{ label: 'Nilai Peserta', data: chartDataParticipant, backgroundColor: 'rgba(54, 162, 235, 0.2)', borderColor: 'rgba(54, 162, 235, 1)', borderWidth: 2 }, { label: 'Rata-rata Angkatan', data: chartDataCohort, backgroundColor: 'rgba(255, 99, 132, 0.2)', borderColor: 'rgba(255, 99, 132, 1)', borderWidth: 1 }] }, options: { scales: { r: { beginAtZero: true, max: 100 } }, plugins: { legend: { position: 'top' } } } });
+    participantProgressChartInstance = new Chart(ctx, { type: 'radar', data: { labels: chartLabels, datasets: [{ label: 'Nilai Peserta', data: chartDataParticipant, backgroundColor: 'rgba(217, 70, 137, 0.2)', borderColor: 'rgba(217, 70, 137, 1)', borderWidth: 2 }, { label: 'Rata-rata Angkatan', data: chartDataCohort, backgroundColor: 'rgba(255, 99, 132, 0.2)', borderColor: 'rgba(255, 99, 132, 1)', borderWidth: 1 }] }, options: { scales: { r: { beginAtZero: true, max: 100 } }, plugins: { legend: { position: 'top' } } } });
     participantDetailModal.show();
 }
 function printParticipantResult(pesertaId) {
@@ -2500,7 +2488,7 @@ function clearSystemLog() { if (!confirm("Anda yakin ingin menghapus semua catat
 // =================================================================
 function backupLocalData() { const dataToBackup = { peserta: getFromStorage('peserta'), penguji: getFromStorage('penguji'), stations: getFromStorage('stations'), scores: getFromStorage('scores'), scheduleParams: getFromStorage('osce_schedule_params'), feedback: getFromStorage('feedback'), systemLog: getFromStorage(LOG_KEY), certSettings: getFromStorage(CERT_SETTINGS_KEY), backupDate: new Date().toISOString() }; const jsonString = JSON.stringify(dataToBackup, null, 2); const blob = new Blob([jsonString], {type: "application/json"}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = `osce_backup_${new Date().toISOString().slice(0,10)}.json`; document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url); logActivity('BACKUP_DATA'); alert("Backup berhasil diunduh!"); }
 function handleRestoreFile(event) { const file = event.target.files[0]; if (!file) return; if (!confirm("Ini akan MENIMPA semua data lokal saat ini dengan data dari file backup. Anda yakin?")) { event.target.value = null; return; } const reader = new FileReader(); reader.onload = function(e) { try { const data = JSON.parse(e.target.result); if (data.peserta && data.penguji && data.stations && data.scores) { saveToStorage('peserta', data.peserta); saveToStorage('penguji', data.penguji); saveToStorage('stations', data.stations); saveToStorage('scores', data.scores); saveToStorage('osce_schedule_params', data.scheduleParams || {}); saveToStorage('feedback', data.feedback || []); saveToStorage(CERT_SETTINGS_KEY, data.certSettings || {}); if (data.systemLog) saveToStorage(LOG_KEY, data.systemLog); logActivity('RESTORE_DATA', `Data dipulihkan dari file: ${file.name}`); alert("Data berhasil dipulihkan dari file backup!"); loadPageContent(document.querySelector('.page.active').id); } else { alert("File backup tidak valid atau formatnya salah."); } } catch (error) { alert("Gagal membaca file backup. Error: " + error.message); } finally { event.target.value = null; } }; reader.readAsText(file); }
-function importCSV(type, event) { const file = event.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = (e) => { const text = e.target.result; const rows = text.trim().split('\n').slice(1); if (rows.length === 0) return alert("File CSV kosong atau tidak ada data."); let existingData = getFromStorage(type); const keyField = type === 'peserta' ? 'nim' : 'idPenguji'; let newItems = []; let duplicates = 0; rows.forEach(row => { const cols = row.split(',').map(s => s.trim().replace(/"/g, '')); if (cols.length < 2 || !cols[0] || !cols[1]) return; const idValue = cols[0]; const nameValue = cols[1]; if (!existingData.some(item => item[keyField] == idValue)) { const newItem = { id: Date.now() + newItems.length, nama: nameValue }; newItem[keyField] = idValue; if (type === 'peserta') { newItem.sesi = null; newItem.password = cols.length >= 3 && cols[2] ? cols[2].trim() : idValue; } if (type === 'penguji' && cols.length >= 3 && cols[2]) { const stationName = cols[2].trim(); const stations = getFromStorage('stations'); const station = stations.find(s => s.name.toLowerCase() === stationName.toLowerCase()); if (station) newItem.assignedStationId = station.id; } newItems.push(newItem); } else { duplicates++; } }); if (newItems.length > 0) { if (confirm(`${newItems.length} data baru akan diimpor. ${duplicates} data duplikat dilewati. Lanjutkan?`)) { saveToStorage(type, [...existingData, ...newItems]); logActivity(`IMPORT_${type.toUpperCase()}`, `${newItems.length} data baru diimpor dari CSV.`); alert(`Impor berhasil! ${newItems.length} data baru ditambahkan.`); if (type === 'peserta') loadPeserta(); if (type === 'penguji') loadPenguji(); } } else { alert(`Tidak ada data baru untuk diimpor. ${duplicates} data duplikat ditemukan dan dilewati.`); } event.target.value = null; }; reader.readAsText(file); }
+function importCSV(type, event) { const file = event.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = (e) => { const text = e.target.result; const rows = text.trim().split('\n').slice(1); if (rows.length === 0) return alert("File CSV kosong atau tidak ada data."); let existingData = getFromStorage(type); const keyField = type === 'peserta' ? 'nim' : 'idPenguji'; let newItems = []; let duplicates = 0; rows.forEach(row => { const cols = row.split(',').map(s => s.trim().replace(/"/g, '')); if (cols.length < 2 || !cols[0] || !cols[1]) return; const idValue = cols[0]; const nameValue = cols[1]; if (!existingData.some(item => item[keyField] == idValue)) { const newItem = { id: Date.now() + newItems.length, nama: nameValue }; newItem[keyField] = idValue; if (type === 'peserta') { newItem.sesi = null; newItem.password = cols.length >= 3 && cols[2] ? cols[2].trim() : idValue; } if (type === 'penguji' && cols.length >= 3 && cols[2]) { const stationName = cols[2].trim(); const stations = getFromStorage('stations'); const station = stations.find(s => s.name.toLowerCase()=== stationName.toLowerCase()); if (station) newItem.assignedStationId = station.id; } newItems.push(newItem); } else { duplicates++; } }); if (newItems.length > 0) { if (confirm(`${newItems.length} data baru akan diimpor. ${duplicates} data duplikat dilewati. Lanjutkan?`)) { saveToStorage(type, [...existingData, ...newItems]); logActivity(`IMPORT_${type.toUpperCase()}`, `${newItems.length} data baru diimpor dari CSV.`); alert(`Impor berhasil! ${newItems.length} data baru ditambahkan.`); if (type === 'peserta') loadPeserta(); if (type === 'penguji') loadPenguji(); } } else { alert(`Tidak ada data baru untuk diimpor. ${duplicates} data duplikat ditemukan dan dilewati.`); } event.target.value = null; }; reader.readAsText(file); }
 function triggerFileUpload(inputId) { document.getElementById(inputId).click(); }
 function exportToCSV() {
     const scores = getFromStorage('scores'); if (scores.length === 0) return alert("Tidak ada data untuk diekspor.");
