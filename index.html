@@ -98,6 +98,14 @@
     </li>
     <li class="nav-item role-admin role-penguji"><a class="nav-link" href="#" data-page="page-penilaian"><i class="fas fa-clipboard-list"></i> Penilaian</a></li>
     <li class="nav-item role-admin"><a class="nav-link" href="#" data-page="page-hasil"><i class="fas fa-chart-bar"></i> Hasil</a></li>
+        <li class="nav-item dropdown role-admin">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCert" role="button" data-bs-toggle="dropdown"><i class="fas fa-award"></i> Sertifikat</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCert">
+            <li><a class="dropdown-item" href="#" data-page="page-sertifikat-settings"><i class="fas fa-cog"></i> Pengaturan</a></li>
+            <li><a class="dropdown-item" href="#" data-page="page-sertifikat-print"><i class="fas fa-print"></i> Sertifikat Peserta</a></li>
+            <li><a class="dropdown-item" href="#" data-page="page-sertifikat-penguji"><i class="fas fa-user-shield"></i> Sertifikat Penguji</a></li>
+        </ul>
+    </li>
     <li class="nav-item role-admin"><a class="nav-link" href="#" data-page="page-feedback-summary"><i class="fas fa-comment-dots"></i> Feedback</a></li>
     <li class="nav-item role-penguji d-none">
         <button class="btn btn-info" onclick="pushPengujiScores()"><i class="fas fa-cloud-upload-alt"></i> Kirim Nilai</button>
